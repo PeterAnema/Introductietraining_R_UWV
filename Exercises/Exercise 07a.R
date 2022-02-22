@@ -2,7 +2,7 @@
 # Exercise 7a -----------------------------------------------------------------------
 
 #1 import the following file : d:\\adventureworks.csv into a dataframe called df
-df <- read.csv ("data/adventureworks.csv")
+df <- read.csv ("Data/adventureworks.csv")
 
 #Create a histogram based on YearlyIncome
 hist (df$YearlyIncome)
@@ -42,6 +42,9 @@ plot (df$UnitPrice, df$TotalProductCost)
 boxplot (df$YearlyIncome)
 
 ## 10. Create a plot which shows min, max and median values for YearlyIncome by Gender
+df$Gender = as.factor(df$Gender)
 plot ( df$Gender, df$SalesAmount)
+
+
 
 

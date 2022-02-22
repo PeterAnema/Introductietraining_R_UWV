@@ -29,7 +29,7 @@ f
 #8. Make sure the title and the labels below the bars clarify the graph
 #9. Show the percentages between each bar (no need to show decimal precision) and the total of observations
 
-barplot (table (df$Gender), 
+barplot (table(df$Gender), 
          ylim=c(0, nrow (df)), 
          ylab="Count", 
          main= "Married / Single (n=60K)", 
