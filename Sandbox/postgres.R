@@ -13,6 +13,6 @@ con <- dbConnect(RPostgres::Postgres(),
 
 dbListTables(con)
 
-dbGetQuery(con, 'SELECT * FROM klanten') 
+dbGetQuery(con, 'SELECT * FROM klanten;') 
 
 dbDisconnect(con) 
