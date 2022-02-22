@@ -1,0 +1,7 @@
+plot(cars, type='n', xlab='Speed in Miles Per Hour', ylab='Distance in Feet')
+points(speed[speed<15], dist[speed<15], pch='s', col='red')
+points(speed[speed>=15], dist[speed>=15], pch='f', col='blue')
+lines(lowess(cars), col='red')
+lines(cars, col='red')
+legend(5,120, pch=c('s','f'), col=c('red', 'blue'), legend=c('Slow','Fast'))
+title('Breaking distance')
