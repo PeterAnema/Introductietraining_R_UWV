@@ -19,10 +19,11 @@ mean ( subset (df.females, NumberChildrenAtHome > 4 )$YearlyIncome)
 
 #factors
 # 5. Show the number of married and single females in a table
-table (df$MaritalStatus, df$Gender)
+table(df$MaritalStatus, df$Gender)
 
 # 6. create a table based on TotalChildren and Education
-table (df$TotalChildren, df$Education)
+table(df$TotalChildren, df$Education)
+
 #7. Which education level scores the highest number without children
 #8. Which education level scores the highest number with 5 children
 

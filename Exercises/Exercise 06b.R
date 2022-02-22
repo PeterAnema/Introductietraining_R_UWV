@@ -18,8 +18,11 @@ head (dfo)
 #Divide the commuters in two groups "Far" and "Near"
 df$Proximity[ df$CommuteDistance == "10+ Miles"] <- "Far"
 df$Proximity[ df$CommuteDistance != "10+ Miles"] <- "Near"
+
 #or
-ifelse (df$CommuteDistance == "10+ Miles", df$Proximity <- "Far", df$Proximity <- "Near")
+ifelse (df$CommuteDistance == "10+ Miles", 
+        df$Proximity <- "Far", 
+        df$Proximity <- "Near")
 
 
 # Create a table based on Proximity and HouseOwnerFlag

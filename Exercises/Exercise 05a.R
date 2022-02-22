@@ -2,11 +2,12 @@
 # Exercise 5a -----------------------------------------------------------------------
 
 # Import the following file : d:\\adventureworks.csv into a dataframe called df
-df <- read.csv ("data/adventureworks.csv")
+df <- read.csv ("Data/adventureworks.csv")
 
 # Inspect first 10 and last 10 records from df
 head(df, 10)
 tail(df, 10)
+
 # Inspect the structure of the dataframe
 str(df)
 
@@ -29,6 +30,7 @@ nrow(df) == nrow(df.females) + nrow(df.males)
 promos <- c("Promotion",  "PromotionType", "PromotionCategory")
 promos
 dfp <- subset(df, select = promos)
+dfp <- df[, promos]
 head(dfp)
 
 
