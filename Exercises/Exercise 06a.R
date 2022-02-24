@@ -42,3 +42,13 @@ f
 
 # or
 aggregate(YearlyIncome ~ Gender, data = df, FUN = mean)
+
+#or
+aggregate(YearlyIncome ~ Gender + MaritalStatus, data = df, FUN = mean)
+
+# or
+library(sqldf)
+
+sqldf("SELECT Gender, MaritalStatus, AVG(YearlyIncome) AS n
+       FROM df 
+       GROUP BY Gender, MaritalStatus")
