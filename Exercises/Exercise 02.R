@@ -9,6 +9,7 @@ install.packages("car")
 
 #load this package
 library ( car )
+
 #load the Help Pages for this package
 help (package = "car")
 #locate the Prestige dataset in the Help Pages and inspect the metadata
