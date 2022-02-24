@@ -28,7 +28,7 @@ table(df$TotalChildren, df$Education)
 #8. Which education level scores the highest number with 5 children
 
 #9. Using the table() function,compare the number of married people with those who are single 
-table (df$MaritalStatus)
+table(df$MaritalStatus)
 
 # 10 . calculate the Male / Female percentages 
 m <- (nrow (df.males) )/ (nrow (df)) * 100
@@ -40,4 +40,5 @@ f <- round (f, 2)
 m
 f
 
-
+# or
+aggregate(YearlyIncome ~ Gender, data = df, FUN = mean)

@@ -2,7 +2,7 @@
 # Exercise 5a -----------------------------------------------------------------------
 
 # Import the following file : d:\\adventureworks.csv into a dataframe called df
-df <- read.csv ("Data/adventureworks.csv")
+df <- read.csv ("Data/adventureworks.csv", stringsAsFactors = FALSE)
 
 # Inspect first 10 and last 10 records from df
 head(df, 10)
@@ -18,9 +18,17 @@ summary (df)
 nrow(df)
 
 # Create 2 separate dataframes called df.males and df.females based on gender
-df.males <- df[df$Gender == "M",]
+df.males <- df[df$Gender == "M", ]
+
+# or
+df.males <- subset(df, Gender == "M")
+
 nrow(df.males)
+
 df.females <- df[df$Gender == "F",]
+# or
+df.females <- subset(df, Gender == "F")
+
 nrow(df.females)
 
 # Check whether combined record counts add up to the original number
@@ -29,8 +37,12 @@ nrow(df) == nrow(df.females) + nrow(df.males)
 # Select the three Promotion related columns from the main dataframe in a new dataframe
 promos <- c("Promotion",  "PromotionType", "PromotionCategory")
 promos
-dfp <- subset(df, select = promos)
+
 dfp <- df[, promos]
+
+# or
+dfp <- subset(df, select = promos)
+
 head(dfp)
 
 
